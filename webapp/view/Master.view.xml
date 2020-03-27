@@ -1,0 +1,60 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+	controllerName="skm.test.Person.controller.Master" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="master" title="员工清单" backgroundDesign="Solid" class="sapUiStdPage">
+		<content>
+			<Panel>
+				<form:SimpleForm title="{i18n>masterTitle}" editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="2" labelSpanM="2"
+					labelSpanS="6" emptySpanL="1" emptySpanM="1">
+					<form:content>
+						<Label text="{i18n>labelPernr}" labelFor="inputPernr">
+							<layoutData>
+								<l:GridData span="XL3 L3 M3 S4"/>
+							</layoutData>
+						</Label>
+						<Input id="inputPernr" placeholder="Enter User ID..." showValueHelp="true" valueHelpRequest="onValueHelpPernr" showSuggestion="true"
+							suggestionItems="{/PersonSet}">
+							<suggestionItems>
+								<core:Item text="{Pernr}"/>
+							</suggestionItems>
+							<layoutData>
+								<l:GridData span="XL9 L9 M9 S8"/>
+							</layoutData>
+						</Input>
+						<Label text="{i18n>labelOrgeh}" labelFor="inputOrgeh">
+							<layoutData>
+								<l:GridData span="XL3 L3 M3 S4"/>
+							</layoutData>
+						</Label>
+						<Input id="inputOrgeh" placeholder="Enter Department" showValueHelp="true" valueHelpRequest="onValueHelpOrgeh" showSuggestion="true"
+							suggestionItems="{/F4OrgehSet}">
+							<suggestionItems>
+								<core:Item text="{Orgeh}"/>
+							</suggestionItems>
+							<layoutData>
+								<l:GridData span="XL9 L9 M9 S8"/>
+							</layoutData>
+						</Input>
+						<Label text="" labelFor="buttonQuery">
+							<layoutData>
+								<l:GridData span="XL6 L6 M6 S6"/>
+							</layoutData>
+						</Label>
+						<Button id="buttonQuery" text="{i18n>buttonQuery}" press=".onPressQuery" icon="sap-icon://search" type="Emphasized" width="auto">
+							<layoutData>
+								<l:GridData span="XL6 L6 M6 S6"/>
+							</layoutData>
+						</Button>
+					</form:content>
+				</form:SimpleForm>
+			</Panel>
+			<Panel>
+				<List id="listPerson" growing="true" growingThreshold="5" headerText="员工编号/姓名" showUnread="false" class="sapUiResponsiveMargin"
+					width="auto" noDataText="没有人员信息" items="{path: '/PersonSet', sorter: {path: 'Pernr'}}">
+					<items>
+						<StandardListItem title="{Pernr}" description="{Nachn}{Vorna}" type="Active" press="onItemPress"/>
+					</items>
+				</List>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>

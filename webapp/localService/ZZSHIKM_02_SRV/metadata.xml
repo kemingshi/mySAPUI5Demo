@@ -1,0 +1,88 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZZSHIKM_02_SRV" xml:lang="zh" sap:schema-version="1">
+            <EntityType Name="pa0105" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Usrid4" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Usrid8" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Person" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="人员编号" sap:creatable="false"/>
+                <Property Name="Nachn" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="姓" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vorna" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="名" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Plans" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="职位" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PlansT" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="位置短文本" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Orgeh" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="组织单位" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OrgehT" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="组织单位短文本" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gbdat" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="出生日期" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Famst" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="婚姻状况" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FamstT" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="婚姻状况" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Usrid4" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="系统标识" sap:creatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Usrid8" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="系统标识" sap:creatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="T_pa0022" Relationship="ZZSHIKM_02_SRV.PersonPa0022" FromRole="FromRole_PersonPa0022" ToRole="ToRole_PersonPa0022"/>
+            </EntityType>
+            <EntityType Name="Pa0022" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="人员编号" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Slart" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="教育类型" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SlartT" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="名称" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ausbi" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="学习形式" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AusbiT" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="方面名称" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Slabs" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="学历" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SlabsT" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="名称" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzhryxmc" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="院校名称代码" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzhryxmcqc" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="院校名称" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzhrsxzy" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="所学专业" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzhrzymc" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="专业名称" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzhrxzn" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="学制(年)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzhrxw" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="学位" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zzhrxwmc" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="学位名称" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="F4Orgeh" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Orgeh"/>
+                </Key>
+                <Property Name="Orgeh" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="组织单位" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Orgtx" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="组织单位短文本" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="PersonPa0022" sap:content-version="1">
+                <End Type="ZZSHIKM_02_SRV.Person" Multiplicity="1" Role="FromRole_PersonPa0022"/>
+                <End Type="ZZSHIKM_02_SRV.Pa0022" Multiplicity="*" Role="ToRole_PersonPa0022"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_PersonPa0022">
+                        <PropertyRef Name="Pernr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_PersonPa0022">
+                        <PropertyRef Name="Pernr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZZSHIKM_02_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="pa0105Set" EntityType="ZZSHIKM_02_SRV.pa0105" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="PersonSet" EntityType="ZZSHIKM_02_SRV.Person" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="Pa0022Set" EntityType="ZZSHIKM_02_SRV.Pa0022" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="F4OrgehSet" EntityType="ZZSHIKM_02_SRV.F4Orgeh" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="PersonPa0022_AssocSet" Association="ZZSHIKM_02_SRV.PersonPa0022" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="PersonSet" Role="FromRole_PersonPa0022"/>
+                    <End EntitySet="Pa0022Set" Role="ToRole_PersonPa0022"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZZSHIKM_02_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZZSHIKM_02_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

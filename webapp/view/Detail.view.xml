@@ -1,0 +1,157 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml" controllerName="skm.test.Person.controller.Detail">
+	<Page id="detail"  title="员工明细" backgroundDesign="Solid" class="sapUiStdPage">
+		<content>
+			<Panel>
+				<form:SimpleForm title="{i18n>masterTitle}" editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="2" labelSpanM="2"
+					labelSpanS="4" emptySpanXL="1" emptySpanL="1" emptySpanM="1" emptySpanS="1" columnsXL="1" columnsL="1" columnsM="1">
+					<form:content>
+						<Label text="{i18n>labelMame}" labelFor="inputName">
+							<layoutData>
+								<l:GridData span="XL2 L2 M2 S4"/>
+							</layoutData>
+						</Label>
+						<Input id="inputName" editable="false" value="{Nachn}{Vorna}">
+							<layoutData>
+								<l:GridData span="XL4 L4 M4 S8"/>
+							</layoutData>
+						</Input>
+						<Label text="{i18n>labelPernr}" labelFor="inputPernr">
+							<layoutData>
+								<l:GridData span="XL2 L2 M2 S4"/>
+							</layoutData>
+						</Label>
+						<Input id="inputPernr" editable="false" value="{Pernr}">
+							<layoutData>
+								<l:GridData span="XL4 L4 M4 S8"/>
+							</layoutData>
+						</Input>
+						<Label text="{i18n>labelPlans}" labelFor="inputPlans">
+							<layoutData>
+								<l:GridData span="XL2 L2 M2 S4"/>
+							</layoutData>
+						</Label>
+						<Input id="inputPlans" editable="false" value="{Plans} {PlansT}">
+							<layoutData>
+								<l:GridData span="XL4 L4 M4 S8"/>
+							</layoutData>
+						</Input>
+						<Label text="{i18n>labelOrgeh}" labelFor="inputOrgeh">
+							<layoutData>
+								<l:GridData span="XL2 L2 M2 S4"/>
+							</layoutData>
+						</Label>
+						<Input id="inputOrgeh" editable="false" value="{Orgeh} {OrgehT}">
+							<layoutData>
+								<l:GridData span="XL4 L4 M4 S8"/>
+							</layoutData>
+						</Input>
+						<Label text="{i18n>labelGbdat}" labelFor="inputGbdat">
+							<layoutData>
+								<l:GridData span="XL2 L2 M2 S4"/>
+							</layoutData>
+						</Label>
+						<Input id="inputGbdat" editable="false" value="{Gbdat}">
+							<layoutData>
+								<l:GridData span="XL4 L4 M4 S8"/>
+							</layoutData>
+						</Input>
+						<Label text="{i18n>labelFamst}" labelFor="inputFamst">
+							<layoutData>
+								<l:GridData span="XL2 L2 M2 S4"/>
+							</layoutData>
+						</Label>
+						<Input id="inputFamst" editable="false" value="{Famst} {FamstT}">
+							<layoutData>
+								<l:GridData span="XL4 L4 M4 S8"/>
+							</layoutData>
+						</Input>
+						<Label text="{i18n>labelUsrid4}" labelFor="inputUsrid4">
+							<layoutData>
+								<l:GridData span="XL2 L2 M2 S4"/>
+							</layoutData>
+						</Label>
+						<Input id="inputUsrid4" type="Tel" value="{ path: 'Usrid4', type: '.customTelType' }" editable="true">
+							<layoutData>
+								<l:GridData span="XL4 L4 M4 S8"/>
+							</layoutData>
+						</Input>
+						<Label text="{i18n>labelUsrid8}" labelFor="inputUsrid8">
+							<layoutData>
+								<l:GridData span="XL2 L2 M2 S4"/>
+							</layoutData>
+						</Label>
+						<Input id="inputUsrid8" type="Email" value="{ path: 'Usrid8', type: '.customEMailType' }" editable="true">
+							<layoutData>
+								<l:GridData span="XL4 L4 M4 S8"/>
+							</layoutData>
+						</Input>
+						<Label text="" labelFor="buttonSave">
+							<layoutData>
+								<l:GridData span="XL8 L8 M10 S8"/>
+							</layoutData>
+						</Label>
+						<Button id="buttonSave" text="{i18n>buttonSave}" press="onButtonSave" icon="sap-icon://save" type="Emphasized" width="auto">
+							<layoutData>
+								<l:GridData span="XL4 L4 M2 S4"/>
+							</layoutData>
+						</Button>
+					</form:content>
+				</form:SimpleForm>
+			</Panel>
+			<Table id="tablePa0022" headerText="" noDataText="{i18n>noDataText}" items="{path: '/Pa0022Set'}" >
+			<!--'/Pa0022Set'}">-->
+				<items>
+					<ColumnListItem type="Active" press="onItemPress">
+						<cells>
+							<Text text="{SlartT}"/>
+							<Text text="{AusbiT}"/>
+							<Text text="{SlabsT}"/>
+							<Text text="{Zzhryxmcqc}"/>
+							<Text text="{Zzhrzymc}"/>
+							<Text text="{Zzhrxzn}"/>
+							<Text text="{Zzhrxwmc}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+				<columns>
+					<Column>
+						<header>
+							<Label text="{i18n>SlartT}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>AusbiT}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>SlabsT}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>Zzhryxmcqc}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>Zzhrzymc}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>Zzhrxzn}"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="{i18n>Zzhrxwmc}"/>
+						</header>
+					</Column>
+				</columns>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>
