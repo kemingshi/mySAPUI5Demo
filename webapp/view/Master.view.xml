@@ -1,4 +1,5 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:form="sap.ui.layout.form"
+	xmlns:cus="skm.test.Person.control"
 	controllerName="skm.test.Person.controller.Master" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page id="master" title="员工清单" backgroundDesign="Solid" class="sapUiStdPage">
 		<content>
@@ -48,8 +49,8 @@
 				</form:SimpleForm>
 			</Panel>
 			<Panel>
-				<List id="listPerson" growing="true" growingThreshold="5" headerText="员工编号/姓名" showUnread="false" class="sapUiResponsiveMargin"
-					width="auto" noDataText="没有人员信息" items="{path: '/PersonSet', sorter: {path: 'Pernr'}}">
+				<List id="listPerson" growing="true" growingThreshold="5" headerText="员工编号/姓名" showUnread="false" class="sapUiResponsiveMargin" width="auto"
+					noDataText="没有人员信息" items="{path: '/PersonSet', sorter: {path: 'Pernr'}}">
 					<items>
 						<StandardListItem title="{Pernr}" description="{Nachn}{Vorna}" type="Active" press="onItemPress"/>
 					</items>

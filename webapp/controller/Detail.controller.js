@@ -25,7 +25,7 @@ sap.ui.define([
 
 			sCurrentPath = "";
 			sCurrentPernr = "";
-			this.funQueryPa0022(sCurrentPernr);
+			// this.funQueryPa0022(sCurrentPernr);
 
 			this.router = UIComponent.getRouterFor(this);
 			this.router.getRoute("rou_Detail").attachMatched(this._onRouteMatched, this);

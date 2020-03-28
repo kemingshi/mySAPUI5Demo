@@ -99,8 +99,8 @@
 					</form:content>
 				</form:SimpleForm>
 			</Panel>
-			<Table id="tablePa0022" headerText="" noDataText="{i18n>noDataText}" items="{path: '/Pa0022Set'}" >
-			<!--'/Pa0022Set'}">-->
+			<Table id="tablePa0022" headerText="" noDataText="{i18n>noDataText}" items="{T_pa0022}">
+			<!--items="{path: '/Pa0022Set'}" >-->
 				<items>
 					<ColumnListItem type="Active" press="onItemPress">
 						<cells>
