@@ -1,0 +1,17 @@
+<mvc:View controllerName="DemoF4Matnr.controller.App" 
+            xmlns="sap.m"
+            xmlns:mvc="sap.ui.core.mvc"
+            xmlns:my="DemoF4Matnr.controls"
+            xmlns:html="http://www.w3.org/1999/xhtml" 	
+	        displayBlock="true" >
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<my:F4Matnr value="{material>/Matnr}" Description="{material>/Maktx}" werks="1000" lgort="0000" onSelect="onMatnrSelect" width="300px"
+					    valueLiveUpdate="true" liveChange="onLiveChange" />
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
